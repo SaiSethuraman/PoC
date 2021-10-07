@@ -1,0 +1,19 @@
+CREATE TABLE `department` (
+  `departmentId` int NOT NULL,
+  `departmentName` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`departmentId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+-----------------------------------
+CREATE TABLE `student` (
+  `studentId` int NOT NULL AUTO_INCREMENT,
+  `fullName` varchar(255) DEFAULT NULL,
+  `lastName` varchar(255) DEFAULT NULL,
+  `departmentId` int DEFAULT NULL,
+  `joiningDate` date NOT NULL,
+  `studentDob` date DEFAULT NULL,
+  `mobileNo` bigint DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`studentId`,`joiningDate`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
